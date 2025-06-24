@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --x-primary: #000000;
+  --x-hover: #1a1a1a;
+  --x-background: #ffffff;
+  --x-light-gray: #f0f0f0;
+  --x-border: #e1e8ed;
+  --x-icon-gray: #536471;
+  --x-icon-hover: #000000;
+  --x-badge: #50b7f5;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--x-background);
+  color: var(--x-primary);
+  display: flex;
+  height: 100vh;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+}
+
+.sidebarOption {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebarOption .material-symbols-outlined,
+.fa-x-twitter {
+  padding: 20px;
+}
+
+.sidebarOption h2 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.sidebarOption:hover {
+  background-color: var(--x-light-gray);
+  border-radius: 30px;
+  color: var(--x-primary);
+  transition: background-color 100ms ease-out;
+}
+
+.sidebarOption.active {
+  color: var(--x-primary);
+  font-weight: bold;
+}
+
+.sidebar__tweet {
+  width: 100%;
+  background-color: var(--x-primary);
+  border: none;
+  color: white;
+  font-weight: 900;
+  border-radius: 30px;
+  height: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 100ms ease-out;
+}
+
+.sidebar__tweet:hover {
+  background-color: var(--x-hover);
+}
+
+.sidebar {
+  border-right: 1px solid var(--x-border);
+  flex: 0.2;
+  min-width: 250px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.fa-x-twitter {
+  font-size: 30px;
+  color: var(--x-primary);
+  transition: color 0.2s ease-in-out;
+}
+
+/* feed */
+.feed {
+  flex: 0.5;
+  border-right: 1px solid var(--x-border);
+  min-width: fit-content;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.feed::-webkit-scrollbar {
+  display: none;
+}
+
+.feed__header {
+  position: sticky;
+  top: 0;
+  background-color: var(--x-background);
+  z-index: 100;
+  border-bottom: 1px solid var(--x-border);
+  padding: 15px 20px;
+}
+
+.feed__header h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* tweet box */
+.tweetbox__input img {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.tweetBox {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--x-border);
+  padding-right: 10px;
+}
+
+.tweetBox form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweetbox__input {
+  display: flex;
+  padding: 20px;
+}
+
+.tweetbox__input input {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: var(--x-primary);
+}
+
+.tweetBox__tweetButton {
+  background-color: var(--x-primary);
+  border: none;
+  color: white;
+  font-weight: 900;
+  border-radius: 30px;
+  width: 80px;
+  height: 40px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: background-color 100ms ease-out;
+}
+
+.tweetBox__tweetButton:hover {
+  background-color: var(--x-hover);
+}
+
+/* post */
+.post__avatar img {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-filled {
+  font-family: 'Material Symbols Outlined';
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24 !important;
+}
+
+.post {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--x-border);
+  padding-bottom: 10px;
+}
+
+.post__body img {
+  width: 450px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.post__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.post__badge {
+  font-size: 14px !important;
+  color: var(--x-badge);
+}
+
+.post__headerSpecial {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--x-icon-gray);
+}
+
+.post__headerText {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.thread__headerText {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.post__headerText h3,
+.thread__headerText h3 {
+  font-size: 16px;
+}
+
+.post__headerDescription {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.post__body {
+  flex: 1;
+  padding: 20px 20px 10px 10px;
+  max-width: 550px;
+}
+
+.post__avatar {
+  padding: 20px;
+}
+
+.post__thread {
+  display: flex;
+  justify-content: space-between;
+  min-height: 80px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.first {
+  margin-top: 30px;
+}
+
+.post__threadHeaderDescription {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.thread__leftSide {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: center;
+}
+
+.thread__rightSide {
+  display: flex;
+  row-gap: 15px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 440px;
+}
+
+.thread_line {
+  height: 100%;
+  border-left: 2px solid var(--x-border);
+}
+
+.thread__avatar {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.thread__avatar img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.thread__footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.post__icon {
+  cursor: pointer;
+  color: var(--x-icon-gray);
+  transition: color 100ms ease-out;
+  font-size: 18px !important;
+}
+
+.post__icon:hover {
+  color: var(--x-icon-hover);
+}
+
+/* widgets */
+.widgets {
+  flex: 0.3;
+}
+
+.widgets__input {
+  display: flex;
+  align-items: center;
+  background-color: var(--x-light-gray);
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.widgets__input input {
+  border: none;
+  background-color: var(--x-light-gray);
+  color: var(--x-primary);
+}
+
+.widgets__searchIcon {
+  color: var(--x-icon-gray);
+}
+
+.widgets__widgetContainer {
+  margin-top: 15px;
+  margin-left: 20px;
+  padding: 20px;
+  background-color: var(--x-light-gray);
+  border-radius: 20px;
+  color: var(--x-primary);
+}
+
+.widgets__widgetContainer h2 {
+  font-size: 18px;
+  font-weight: 800;
+}
