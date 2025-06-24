@@ -257,6 +257,8 @@ body {
 
 .post__threadHeaderDescription {
   display: flex;
+  flex-direction: column;
+  row-gap: 15px;
   align-items: center;
   font-size: 15px;
 }
